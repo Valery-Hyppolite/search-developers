@@ -1,0 +1,28 @@
+
+
+{% if queryset.has_other_pages %}
+<div class="pagination">
+  <ul class="container">
+
+    {% if queryset.has_previous %}
+    <li><a href="?page={{queryset.previous_page_number}}" class="btn page-link btn--sub" data-page='{{queryset.previous_page_number}}'>&#10094; Prev</a></li> -->
+    {% endif %}
+
+    {% for page in custom_range %}
+    {% if page == queryset.number %}
+    <li><a href="?page={{page}}" class="btn page-link" data-page='{{page}}'>{{page}}</a></li>
+    {% else %}
+    <li><a href="?page={{page}}" class="btn page-link btn--sub" data-page='{{page}}' >{{page}} </a></li>
+    {%  endif %}
+    {% endfor %}
+
+    {% if queryset.has_next %}
+    <li><a href="?page={{queryset.next_page_number}}" class="btn page-link btn--sub" data-page='{{queryset.next_page_number}}'>&#10095; Next</a></li> -->
+    {% endif %}
+
+  </ul>
+</div>
+{% endif %}
+
+<!-- the queryset variable is going to be = to projects which we are passing in from the view. we call it query set here to make this page dynamic or  general since 
+this pagination page will be use in diffrent pages like projects, profiles ect.. to make it general. for each include page, queryset will = to the specific view or html page we trying to render like projects or profiles, and custom_range will = custom_range. -->

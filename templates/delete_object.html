@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- fix the url request.get.next to work -->
+<main class="formPage my-xl">
+    <div class="content-box">
+        <div class="formWrapper">
+            <a class="backButton" href="{{request.GET.next}}"><i class="im im-angle-left"></i></a>
+            <br>
+
+            <form class="form" action="" method="POST">
+                {% csrf_token %}
+                <p> Are you sure you want to delete this <i>>{{object}}</i></p>
+                
+                <input class="btn btn--sub btn--lg  my-md" type="submit" value="confirm" />
+                <a class="btn btn--sub btn--lg  my-md" href="{% url 'useraccount' %}">Go Back</a>
+            </form>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
