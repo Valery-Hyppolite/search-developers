@@ -239,5 +239,5 @@ AWS_ACCESS_KEY_ID = "AKIA6HRJSPB3MPJTJQVR"
 AWS_SECRET_ACCESS_KEY = "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" 
 AWS_STORAGE_BUCKET_NAME = "production-images-web-apps"
 
-if os.getcwd() == '/app':
-    DEBUG = False
+# if os.getcwd() == '/app':
+#     DEBUG = False
