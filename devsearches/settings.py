@@ -126,14 +126,26 @@ WSGI_APPLICATION = 'devsearches.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get('AWSRDB_NAME'),
+#         'USER': os.environ.get('AWSRDB_USER'),
+#         'PASSWORD': os.environ.get('AWSRDB_PASWD'),
+#         'HOST': os.environ.get('AWSRDB_HOST'),
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
 
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('AWSRDB_NAME'),
-        'USER': os.environ.get('AWSRDB_USER'),
-        'PASSWORD': os.environ.get('AWSRDB_PASWD'),
-        'HOST': os.environ.get('AWSRDB_HOST'),
+        'NAME': 'devsearches',
+        'USER': 'Devvalou80k$',
+        'PASSWORD': 'Devvalou80k$',
+        'HOST': 'dev-2022-searches.clwaafnj2lgy.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
@@ -234,5 +246,17 @@ AWS_ACCESS_KEY_ID = "AKIA6HRJSPB3MPJTJQVR"
 AWS_SECRET_ACCESS_KEY = "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" 
 AWS_STORAGE_BUCKET_NAME = "production-images-web-apps"
 
-# if os.getcwd() == '/app':
-#     DEBUG = False
+if os.getcwd() == '/app':
+    DEBUG = False
+
+
+# option_settings:
+#    - namespace: aws:elasticbeanstalk:application:environment
+#      option_name: AWSRDB_NAME
+#      value: devsearches
+#    - option_name: AWSRDB_USER
+#      value: valou
+#    - option_name: AWSRDB_PASWD
+#      value: Devvalou80k$
+#    - option_name: AWSRDB_HOST
+#      value: dev-2022-searches.clwaafnj2lgy.us-east-1.rds.amazonaws.com
