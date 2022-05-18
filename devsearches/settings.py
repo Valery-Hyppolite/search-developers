@@ -143,7 +143,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'devsearches',
-        'USER': 'Devvalou80k$',
+        'USER': 'valou',
         'PASSWORD': 'Devvalou80k$',
         'HOST': 'dev-2022-searches.clwaafnj2lgy.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
