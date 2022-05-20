@@ -140,14 +140,27 @@ WSGI_APPLICATION = 'devsearches.wsgi.application'
 #     }
 # }
 
-DATABASES = {
+# DATABASES = {
 
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'devsearches',
+#         'USER': 'valou',
+#         'PASSWORD': 'Devvalou80k$',
+#         'HOST': 'dev-2022-searches.clwaafnj2lgy.us-east-1.rds.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
+
+#valou-admin databse account
+DATABASES = {
+    
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'devsearches',
+        'NAME': 'discover_devs',
         'USER': 'valou',
         'PASSWORD': 'Devvalou80k$',
-        'HOST': 'dev-2022-searches.clwaafnj2lgy.us-east-1.rds.amazonaws.com',
+        'HOST': 'discover-dev-2022.c3ysewtjmgae.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
@@ -241,12 +254,22 @@ EMAIL_HOST_PASSWORD = 'atrubbiespswrd10$$'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# AWS_QUERYSTRING_AUTH = False
+# AWS_S3_FILE_OVERWRITE = False
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# AWS_ACCESS_KEY_ID = "AKIA6HRJSPB3MPJTJQVR"
+# AWS_SECRET_ACCESS_KEY = "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" 
+# AWS_STORAGE_BUCKET_NAME = "production-images-web-apps"
+
+
+#valou-admin atrubbies acount 
 AWS_QUERYSTRING_AUTH = False
 AWS_S3_FILE_OVERWRITE = False
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-AWS_ACCESS_KEY_ID = "AKIA6HRJSPB3MPJTJQVR"
-AWS_SECRET_ACCESS_KEY = "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" 
-AWS_STORAGE_BUCKET_NAME = "production-images-web-apps"
+AWS_ACCESS_KEY_ID = "AKIA2DLW6CB3JKR3TCUC"
+AWS_SECRET_ACCESS_KEY = "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"
+AWS_STORAGE_BUCKET_NAME = "discover-dev-img"
+
 
 if os.getcwd() == '/app':
     DEBUG = False
