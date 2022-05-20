@@ -23,7 +23,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1','dev-test2.us-east-1.elasticbeanstalk.com', 'discover-devs.us-east-1.elasticbeanstalk.com', 'discover-test2.us-east-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','discover-devs.us-east-1.elasticbeanstalk.com', 'discover-test2.us-east-1.elasticbeanstalk.com', 'discoverdevs.us-east-1.elasticbeanstalk.com']
 
 
 # Application definition
