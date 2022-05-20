@@ -141,31 +141,6 @@ DATABASES = {
 }
 
 # DATABASES = {
-
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'devsearches',
-#         'USER': 'valou',
-#         'PASSWORD': 'Devvalou80k$',
-#         'HOST': 'dev-2022-searches.clwaafnj2lgy.us-east-1.rds.amazonaws.com',
-#         'PORT': '5432',
-#     }
-# }
-
-#valou-admin databse account
-# DATABASES = {
-    
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'discover_devs',
-#         'USER': 'valou',
-#         'PASSWORD': 'Devvalou80k$',
-#         'HOST': 'discover-dev-2022.c3ysewtjmgae.us-east-1.rds.amazonaws.com',
-#         'PORT': '5432',
-#     }
-# }
-
-# DATABASES = {
 #
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
@@ -242,25 +217,11 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.mail.yahoo.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'yougotvava@yahoo.com'
-# EMAIL_HOST_PASSWORD = 'kanf hehd pqyf dnvj'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# AWS_QUERYSTRING_AUTH = False
-# AWS_S3_FILE_OVERWRITE = False
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-# AWS_ACCESS_KEY_ID = "AKIA6HRJSPB3MPJTJQVR"
-# AWS_SECRET_ACCESS_KEY = "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" 
-# AWS_STORAGE_BUCKET_NAME = "production-images-web-apps"
-
 
 #valou-admin atrubbies acount 
 AWS_QUERYSTRING_AUTH = False
@@ -273,15 +234,3 @@ AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 
 if os.getcwd() == '/app':
     DEBUG = False
-
-
-# option_settings:
-#    - namespace: aws:elasticbeanstalk:application:environment
-#      option_name: AWSRDB_NAME
-#      value: devsearches
-#    - option_name: AWSRDB_USER
-#      value: valou
-#    - option_name: AWSRDB_PASWD
-#      value: Devvalou80k$
-#    - option_name: AWSRDB_HOST
-#      value: dev-2022-searches.clwaafnj2lgy.us-east-1.rds.amazonaws.com
