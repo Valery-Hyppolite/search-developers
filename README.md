@@ -6,7 +6,7 @@ Key features:
 create a profile,
 add your skills and projects,
 Edit profile any time,
-Acess you message inbox anytime and reply to request,
+Access you message inbox anytime and reply to request,
 add links for all projects such as github, youtube, website ect..
 
 
