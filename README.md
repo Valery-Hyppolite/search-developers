@@ -3,10 +3,10 @@ live link: http://yourdev.tk
 An ecommerce website for developers to showcase their work and get hired by customers.This website is made using Django and will be deploy with AWS ElasticBeastalk, Route53, Cloudfront,and PostSql database.
 
 Key features:
-create a profile
-add your skills and projects
-Edit profile any time.
-Acess you message inbox anytime and reply to request. 
+create a profile,
+add your skills and projects,
+Edit profile any time,
+Acess you message inbox anytime and reply to request,
 add links for all projects such as github, youtube, website ect..
 
 
