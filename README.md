@@ -1,4 +1,4 @@
-# Discover developers
+# Discover developers (click on Master branch to see code)
 live link: http://yourdev.tk
 A website for developers to showcase their work and get hired by customers.This website is made using Django and will be deploy with AWS ElasticBeastalk, Route53, Cloudfront,and PostSql database.
 
