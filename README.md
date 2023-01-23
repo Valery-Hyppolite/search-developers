@@ -6,6 +6,10 @@ live link: http://yourdev.tk
 A platform that enables developers to showcase their work and get discovered by customers around the globe. Developers can sign up to create profiles. They can add their skills and projects to their profile and launch it for everyone to see. 
 Developers can rate and comment on each other's work. All users have access to a messaging app right under their profile. They can message each other and customers. Users without a profile can send a message to a developer. 
 
+Created a Backend RESTful-API that allows users with certain permissions to make api call the the database. 
+Non users are allowed to fetch data using the Get Method. However, only login user can POST, PUT and DELETE object using the api endpoint. 
+Used JSON Web Token Authentication to authenticate users that want to use the API endpoint.
+
 This Web-App was deployed with ElasticBeanstalk, S3, CloudFront, Route 53, and VPC, and uses PostgreSQL to store data.
 
 * Key features:
@@ -13,6 +17,7 @@ This Web-App was deployed with ElasticBeanstalk, S3, CloudFront, Route 53, and V
 * add, edit, and remove skills and projects
 * Access message inbox anytime and reply to requests,
 * Add links for all projects such as GitHub, Youtube, Website ect..
+* API endpoint to fetch data with authentication.
 
 
 
