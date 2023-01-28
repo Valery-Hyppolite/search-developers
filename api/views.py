@@ -3,8 +3,8 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.response import Response
 from rest_framework import serializers, status  
-from .serializers import ProjectSerializers
-from projects.models import Project, Review, Tag
+from .serializers import ProjectSerializers, ProfileSerializer
+from projects.models import Project, Review, Tag, Profile
 
 
 @api_view(['GET'])
@@ -14,6 +14,9 @@ def getRoutes(request):
         {'GET': '/api/projects'},
         {'GET': '/api/projects/id'},
         {'POST': '/api/projects/id/vote'},
+
+         {'GET': '/api/users'},
+        {'GET': '/api/users/id'},
 
         {'POST': '/api/users/token'},
         {'POST': '/api/users/token/refresh'}
@@ -33,8 +36,22 @@ def getProject(request, pk):
     serializer_projects = ProjectSerializers(projects, many=False)
     return Response(serializer_projects.data)
 
-@api_view(['POST'])
-@permission_classes([IsAuthenticated])
+@api_view(['GET'])
+def getProfiles(request):
+    profiles = Profile.objects.all()
+    serializer_profiles = ProfileSerializer(profiles, many=True)
+    return Response(serializer_profiles.data)
+
+
+@api_view(['GET'])
+def getProfile(request, pk):
+    userProfile = Profile.objects.get(id=pk)
+    #projects = userProfile.project_set.all()
+    serializer_profile = ProfileSerializer(userProfile, many=False)
+    #user_projects_serializers = ProjectUserSerializer(projects, many=True)
+    return Response(serializer_profile.data)
+
+
 def projectVote(request, pk):
     project = Project.objects.get(id=pk)
     user = request.user.profile
