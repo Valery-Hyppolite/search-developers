@@ -6,7 +6,6 @@ from django.conf import settings
 from django.conf.urls.static import static 
 from django.contrib.auth import views as auth_views
 
-# this help u create a url for our static files
 
 
 urlpatterns = [
